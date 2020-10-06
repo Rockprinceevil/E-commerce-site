@@ -1,0 +1,10 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+<h2>Signup page</h2>
+<form method="POST" action="{% url 'signup' %}">
+	{% csrf_token %}
+	{{ form.as_p }}
+	<p><input type="submit" value="signup"></p>
+</form>
+{% endblock content %}
